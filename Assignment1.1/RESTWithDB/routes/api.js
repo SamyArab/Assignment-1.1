@@ -121,34 +121,6 @@ router.get("/students/:id/courses", async (req, res) => {
   }
 })
 
-// // Fetch courses for a specific student
-// router.get("/students/:id/courses", async (req, res) => {
-//   try {
-//     const studentId = req.params.id
-//     const student = await Student.findByPk(studentId, {
-//       include: {
-//         model: Course,
-//         through: "student_courses", // Ensure your model relations support this
-//       },
-//     })
-
-//     if (!student) {
-//       return res.status(404).json({ message: "Student not found" })
-//     }
-
-//     console.log("Fetched Student Data:", student) // Debugging: Check student object
-//     console.log("Fetched Courses:", student.Courses) // Debugging: Check courses
-
-//     // Fix: Ensure courses are returned correctly
-//     res.json(student.Courses || [])
-//   } catch (error) {
-//     console.error("Error fetching student courses:", error)
-//     res
-//       .status(500)
-//       .json({ message: "Failed to fetch courses", error: error.message })
-//   }
-// })
-
 // Query students by first name and last name
 router.get("/students_query_firstName", async (req, res) => {
   try {
