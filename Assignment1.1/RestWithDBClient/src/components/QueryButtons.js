@@ -299,9 +299,10 @@ const QueryButtons = () => {
                           background: "none",
                           border: "none",
                           cursor: "pointer",
+                          color: "white",
                         }}
                       >
-                        🔍
+                        Classes
                       </button>
                     </td>
                   )}
